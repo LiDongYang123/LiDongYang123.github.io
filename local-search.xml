@@ -16,18 +16,5 @@
   
   
   
-  <entry>
-    <title>记一次Nexus的异常问题</title>
-    <link href="/2022/08/29/%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB/"/>
-    <url>/2022/08/29/%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB/</url>
-    
-    <content type="html"><![CDATA[<p>​    公司中项目引用了Nexus中的一些jar包，某天在升级jar包的依赖版本 Relaod Maven Project后报错。报错的内容大致是：Maven - POM for xxx.jar缺失，没有可用的依赖信息。</p><p>​    第一想法是否是新版本jar包还没上传到私服上去，遂去Nexus中查看发现新版本jar包确已上传。其次怀疑是未开沙盒导致的网络原因无法download，开启公司沙盒、切换网络后仍报错。最后通过 mvn -U clean package解决。</p><p>​    -U参数意义：</p><p>​    <img src="1661748611569.jpg" alt=""></p><p>即：强制从远程仓库刷新不存在的release版本和所有的snapshot版本jar包。</p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
   
 </search>
