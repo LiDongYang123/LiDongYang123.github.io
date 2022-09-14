@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jack Li的个人博客</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-08-29T08:28:56.481Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Jack Li</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次Nexus的异常问题</title>
+    <link href="http://example.com/2022/08/29/%E8%AE%B0%E4%B8%80%E6%AC%A1Nexus%E7%9A%84%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98/"/>
+    <id>http://example.com/2022/08/29/%E8%AE%B0%E4%B8%80%E6%AC%A1Nexus%E7%9A%84%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98/</id>
+    <published>2022-08-29T04:49:39.000Z</published>
+    <updated>2022-08-29T08:28:56.481Z</updated>
+    
+    <content type="html"><![CDATA[<p>​    公司中项目引用了Nexus中的一些jar包，某天在升级jar包的依赖版本 Relaod Maven Project后报错。报错的内容大致是：Maven - POM for xxx.jar缺失，没有可用的依赖信息。</p><p>​    第一想法是否是新版本jar包还没上传到私服上去，遂去Nexus中查看发现新版本jar包确已上传。其次怀疑是未开沙盒导致的网络原因无法download，开启公司沙盒、切换网络后仍报错。最后通过 mvn -U clean package解决。</p><p>​    -U参数意义：</p><p>​    <img src="1661748611569.jpg" alt=""></p><p>即：强制从远程仓库刷新不存在的release版本和所有的snapshot版本jar包。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​    公司中项目引用了Nexus中的一些jar包，某天在升级jar包的依赖版本 Relaod Maven Project后报错。报错的内容大致是：Maven - POM for xxx.jar缺失，没有可用的依赖信息。&lt;/p&gt;
+&lt;p&gt;​    第一想法是否是新版本jar</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>记一次Nexus的异常问题</title>
+    <link href="http://example.com/2022/08/29/%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB/"/>
+    <id>http://example.com/2022/08/29/%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB%E5%98%BB/</id>
+    <published>2022-08-29T04:49:39.000Z</published>
+    <updated>2022-08-29T08:28:56.481Z</updated>
+    
+    <content type="html"><![CDATA[<p>​    公司中项目引用了Nexus中的一些jar包，某天在升级jar包的依赖版本 Relaod Maven Project后报错。报错的内容大致是：Maven - POM for xxx.jar缺失，没有可用的依赖信息。</p><p>​    第一想法是否是新版本jar包还没上传到私服上去，遂去Nexus中查看发现新版本jar包确已上传。其次怀疑是未开沙盒导致的网络原因无法download，开启公司沙盒、切换网络后仍报错。最后通过 mvn -U clean package解决。</p><p>​    -U参数意义：</p><p>​    <img src="1661748611569.jpg" alt=""></p><p>即：强制从远程仓库刷新不存在的release版本和所有的snapshot版本jar包。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​    公司中项目引用了Nexus中的一些jar包，某天在升级jar包的依赖版本 Relaod Maven Project后报错。报错的内容大致是：Maven - POM for xxx.jar缺失，没有可用的依赖信息。&lt;/p&gt;
+&lt;p&gt;​    第一想法是否是新版本jar</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
